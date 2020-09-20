@@ -21,17 +21,46 @@ a:hover{
   margin: auto;
 }
 
+.clear::after {
+  content: "";
+   clear:both;
+   display: block;
+}
 
-h2 {
-    color: red;
-  }
-  
-  /* .yellow-fontがついた要素の文字色を黄色に指定。こちらの方が優先されます */
-  .yellow-font {
-    color: yellow; 
-    font-size: 20px;
-  }
 
-.important { 
+
+
+/*==================================
+header
+==================================*/
+
+header{
+  padding:20px 0;
+}
+
+.header-left{
+   float: left;
+}
+
+.header-right{
+  float: right;
+}
+
+.header-title{
+    font-size: 24px;
     font-weight: bold;
+}
+
+.header-nav{
+
+}
+
+.header-nav-item{
+  float:left;
+  margin-left:50px;
+}
+.header-nav-item a{
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 36px;
 }
