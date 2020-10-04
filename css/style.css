@@ -73,6 +73,7 @@ top
   background-image: url(../img/main-vsual-nontitle.png);
   background-size:cover;
   padding:80px 0;
+ 
 }
 
 
@@ -88,6 +89,21 @@ top
   font-size: 18px;
   text-align: center;
 }
+
+.header-nav-item a{
+  margin-bottom: 60px;
+
+}
+
+.header-nav-item dt{
+  border: solid 1px;
+  text-align: center;
+  font-size: small;
+  display: block;
+  display: none;
+}
+
+
 
 
 /*==================================
@@ -176,7 +192,28 @@ input[type="email"],input[type="text"]{
    display: block;
    margin: auto;
 }
-
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 80%;
+}
+ 
+#page-top a {
+    display: block;
+    background: #666;
+    color: #fff;
+    width: 100px;
+    padding: 25px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+}
+ 
+#page-top a:hover {
+    background: #999;
+    text-decoration: none;
+}
 
 /*==================================
 footer
@@ -287,6 +324,8 @@ contact
 input[type="email"],input[type="text"]{
   width:100%;
 }
+
+
 /*==================================
 footer
 ==================================*/

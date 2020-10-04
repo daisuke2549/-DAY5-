@@ -18,7 +18,12 @@
     <div class="header-right">
         <ul class="header-nav clear">
         <li class="header-nav-item"><a href="#">デイトラとは</a></li>
-        <li class="header-nav-item"><a href="#">コース一覧</a></li>
+        <li class="header-nav-item" id="course-list"><a href="#">コース一覧</a>
+        <dt>初級</dt>
+        <dt>中級</dt>
+        <dt>上級</dt>
+
+        </li>
         <li class="header-nav-item"><a href="#">お問い合わせ</a></li> 
         </ul>
     </div>
@@ -81,7 +86,8 @@
     <form action="#" method="post">
         <input type="email" name="email" id="email" placeholder="メールアドレス">
         <button type="submit" class="btn btn-register">無料ではじめる</button>
-    </form>
+    </form>	
+    <p id="page-top"><a href="#">PAGE TOP</a></p>
 </div>
 </section>
 
@@ -91,5 +97,33 @@
 </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+<script>
+  $(function() {
+    $("#course-list a").on("click", function() {
+$("#course-list dt").slideToggle();
+});
+});
+$(function () {
+    var topBtn = $('#page-top');
+    topBtn.hide();
+    //スクロールが500に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 80) {
+            topBtn.fadeIn(300);
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スルスルっとスクロールでトップへもどる
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+</script>
 </body>
 </html>
+
