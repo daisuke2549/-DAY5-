@@ -64,16 +64,48 @@
         <h2 class="section-title">コース一覧</h2>
         <div class="course-wrapper">
             <div class="course-item">
+                <div class="img_first">
                 <img src="./img/web_first.png" alt="ディトラ初級編">
                 <p>HTML / CSS / Bootstrap</p>
+                </div>
+            </div>
+            <div id="modal01" class="c-modal js-modal">
+                <div class="img_first">
+                <div class="c-modal_bg js-modal-close"></div>
+                <div class="c-modal_content _lg">
+                    <div class="c-modal_content_inner">
+                        <img src="./img/web_first.png" alt="ディトラ初級編">
+                    </div>
+                </div>
+                </div>
             </div>
             <div class="course-item">
+                <div class="img_second">
                 <img src="./img/web_second.png" alt="ディトラ中級編">
                 <p>HTML / CSS / JavaScript / jQuery</p>
+                </div>
+            </div>
+            <div id="modal01" class="c-modal2 js-modal2">
+                <div class="c-modal_bg js-modal-close"></div>
+                <div class="c-modal_content _lg">
+                    <div class="c-modal_content_inner">
+                        <img src="./img/web_second.png" alt="ディトラ中級編">
+                    </div>
+                </div>
             </div>
             <div class="course-item">
-                <img src="./img/web_third.png" alt="ディトラ上級編">
+                <div class="img_third">
+                    <img src="./img/web_third.png" alt="ディトラ上級編">
                 <p>PHP / WordPress</p>
+                </div>
+            </div>
+            <div id="modal01" class="c-modal3 js-modal3">
+                <div class="c-modal_bg js-modal-close"></div>
+                <div class="c-modal_content _lg">
+                    <div class="c-modal_content_inner">
+                        <img src="./img/web_third.png" alt="ディトラ上級編">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -123,6 +155,50 @@ $(function () {
         return false;
     });
 });
+$( '.img_first' ).each( function() {
+     $( this ).on( 'click', function() {
+          var target = $( this ).data( 'target' );
+          var modal = document.getElementById( target );
+          $('.c-modal').fadeIn();
+          return false;
+     });
+});
+
+// ウィンドウを閉じる
+$( '.c-modal' ).on( 'click', function() {
+    $( '.js-modal' ).fadeOut(  );
+    return false;
+});
+$( '.img_second' ).each( function() {
+     $( this ).on( 'click', function() {
+          var target = $( this ).data( 'target' );
+          var modal = document.getElementById( target );
+          $('.c-modal2').fadeIn();
+          return false;
+     });
+});
+
+// ウィンドウを閉じる
+$( '.c-modal2' ).on( 'click', function() {
+    $( '.js-modal2' ).fadeOut( 300 );
+    return false;
+});
+
+$( '.img_third' ).each( function() {
+     $( this ).on( 'click', function() {
+          var target = $( this ).data( 'target' );
+          var modal = document.getElementById( target );
+          $('.c-modal3').fadeIn();
+          return false;
+     });
+});
+
+// ウィンドウを閉じる
+$( '.c-modal3' ).on( 'click', function() {
+    $( '.js-modal3' ).fadeOut( 300 );
+    return false;
+});
+
 </script>
 </body>
 </html>
